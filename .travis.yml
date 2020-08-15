@@ -12,16 +12,16 @@ after-success:
     - docker build -t ashevade/multi-nginx ./nginx
     - docker build -t ashevade/multi-server ./server
     - docker build -t ashevade/multi-worker ./worker
-#Login to docker CLI
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    #Login to docker CLI
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-#push the images
-- docker push ashevade/multi-client
-- docker push ashevade/multi-nginx
-- docker push ashevade/multi-server
-- docker push ashevade/multi-worker
+    #push the images
+    - docker push ashevade/multi-client
+    - docker push ashevade/multi-nginx
+    - docker push ashevade/multi-server
+    - docker push ashevade/multi-worker
 
-#TEST
+
 
 
 
